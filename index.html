@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Proyecto Uno - 201801518</title>
+        <!-- ----  -  --  --- --- -- ---  CSS -- - - -- - -- - -- - - - - - -- - - -->
+        <link href="./css/miauUno.css" rel="stylesheet">
+        <!-- ----  -  --  --- --- -- ---  FIN CSS -- - - -- - -- - -- - - - - - -- - - -->
+    </head>
+    <body style="background-image: url(https://fondosmil.com/fondo/22205.png)">
+        <div id="wrapper">
+
+
+        <!-- ----  -  --  --- --- -- ---  Barra pagina inicial, login y libros disponibles- - -- - -- - -- - - - - - -- - - -->
+        <div id="navBarInicial">
+            <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+                <!-- Titulo barra vertical -->
+                <a class="sidebar-brand d-flex align-items-center justify-content-center">
+                    <div class="sidebar-brand-text mx-3">Biblioteca EDD <sup>2022</sup></div>
+                </a>
+                <!-- Botones -->
+                <div class="sidebar-card d-none d-lg-flex">
+                <button class="btn btn-success btn-sm" onclick="iraPrincipal()">Pagina Principal </button>
+                </div>
+                <!-- Botones -->
+                <div class="sidebar-card d-none d-lg-flex">
+                    <button class="btn btn-success btn-sm" onclick="iralibrossinLogin()"> Libros Disponibles </button>
+                    </div>
+                <!-- Botones -->
+                <div class="sidebar-card d-none d-lg-flex">
+                    <button class="btn btn-success btn-sm"  onclick="iraLogin()">Iniciar Sesion </button>
+                </div>
+                 <!-- ----- ------------------------------- -->
+            </ul>
+            </div>
+        <!-- ----  -  --  --- --- -- ---  FIN Barra pagina inicial, login y libros disponibles- - -- - -- - -- - - - - - -- - - -->
+
+
+                <!-- ----  -  --  --- --- -- ---  Pagina inicial sin login- -- -- -- - - - - -- - - -  -- - -- - -- - -- - - - - - -- - - -->
+                <div class="container-fluid" id="paginaPrincipal">
+                    <hr>   
+                    <!-- Tarjeta uno -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Bienvenido a la Biblioteca</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">Estructuras de Datos 2022</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- Tarjeta Dos -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Ander Gilberto Popol Poron</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">201801518</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- Tarjeta tres -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Escuela de Vacaciones Junio</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">Gracias por visitarnos :)</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 
+                </div>    
+                <!-- ----  -  --  --- --- -- ---  FIN Pagina inicial sin login- -- -- -- - - - - -- - - -  -- - -- - -- - -- - - - - - -- - - -->
+
+
+        <!-- ---  - - - - - -- - - - - - - - - - -  - - -  LOGIN - - - -- - - -  -- - -  -------------------->
+        <div class="container" id="login">
+            <hr><hr>
+            <div class="row justify-content-center">
+                <div class="col-xl-10 col-lg-12 col-md-9">
+                    <div class="card o-hidden border-0 shadow-lg my-5">
+                        <div class="card-body p-0">
+                            <div class="row">
+                                <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                                <div class="col-lg-6">
+                                    <div class="p-5">
+                                        <hr> <hr><hr><hr><div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Bienvenido</h1></div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control form-control-user" id="userLogin" aria-describedby="emailHelp" placeholder="Usuario">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control form-control-user" id="passwordLogin" placeholder="Contraseña">
+                                            </div>
+                                            <button  class="btn btn-primary btn-user btn-block" onclick="verificarLogin()">Ingresar</button>
+                                            <hr> <hr> <hr><hr>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        <!-- - - - - - - - - -- ---------------------- FIN LOGIN ----------------------------------------------------------->
+
+
+         <!-- Barra vertical Administrador-->
+                <div id="barraAdministrador">
+                    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+                        <!-- Titulo barra vertical -->
+                        <a class="sidebar-brand d-flex align-items-center justify-content-center" id="nameadmin">
+                            
+                        </a>
+                        <a class="sidebar-brand d-flex align-items-center justify-content-center">
+                            <div class="sidebar-brand-text mx-3">Administrador</div>
+                        </a>
+                        <!-- Botones -->
+                        <div class="sidebar-card d-none d-lg-flex">
+                        <button class="btn btn-success btn-sm" onclick="irAlibrosAdmin()">Libros </button>
+                        </div>
+                        <!-- Botones -->
+                        <div class="sidebar-card d-none d-lg-flex">
+                            <button class="btn btn-success btn-sm" onclick="irAautoresAdmin()">Autores </button>
+                            </div>
+                        <!-- Botones -->
+                        <div class="sidebar-card d-none d-lg-flex">
+                            <button class="btn btn-success btn-sm" onclick="irAusuariosAdmin()">Usuarios</button>
+                        </div>
+                        <!-- Botones -->
+                        <div class="sidebar-card d-none d-lg-flex">
+                        <button class="btn btn-success btn-sm" onclick="logout()">Logout</button>
+                        </div>
+                         <!-- ----- ------------------------------- -->
+                    </ul>
+                    </div>
+        <!-- Fin barra vertical Administrador-->
+            
+        <!-- Pagina principal Administrador -->
+                        <div class="container-fluid" id="principalAdmin">
+                            <hr>   
+                            <!-- Tarjeta uno -->
+                            <div class="col-xl-3 col-md-6 mb-4">
+                                <div class="card border-left-primary shadow h-100 py-2">
+                                    <div class="card-body">
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col mr-2" id="datosAdmin">
+                                            </div>
+                                            <div class="col-auto">
+                                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 mb-4">
+                                <div class="card border-left-primary shadow h-100 py-2">
+                                    <div class="card-body">
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col mr-2" >
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">Bienvenido Administrador</div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+        <!-- FIN Pagina principal Administrador -->
+
+
+
+
+        <!-- Pagina USUARIOS Administrador -->
+        <div class="container-fluid" id="usuariosAdmin">
+            <hr>   
+            <!-- Tarjeta uno -->
+            <div class="row">
+            <div class="col-xl-4 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">Cargar Usuarios</div>
+                                <hr>   
+                                <input type="file" id="fileUsuarios" class="btn btn-success btn-sm"></input>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">Mostrar Estructura</div>
+                                <hr>
+                                <button class="btn btn-success btn-sm" onclick="graficaEstructuraUsers()">Mostrar</button>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="col-xl-12 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="graficaEstructuraUsuarios"></div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+       
+    <!-- FIN USUARIOS Administrador -->
+            
+
+
+<!-- Pagina AUTORES Administrador -->
+<div class="container-fluid" id="autoresAdmin">
+    <hr>   
+    <!-- Tarjeta uno -->
+    <div class="row">
+    <div class="col-xl-4 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">Cargar Autores</div>
+                        <hr>   
+                        <input type="file" id="fileAutores" class="btn btn-success btn-sm"></input>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">Mostrar Estructura</div>
+                        <hr>
+                        <button class="btn btn-success btn-sm" onclick="graficaAutores()">Mostrar</button>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
+<div class="col-xl-12 col-md-6 mb-4">
+    <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                    <div class="h5 mb-0 font-weight-bold text-gray-800" id="graficaautores"></div>
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+</div>
+
+<!-- FIN AUTORES Administrador -->
+
+
+
+ <!-- Pagina Libros Administrador -->
+ <div class="container-fluid" id="librosAdmin">
+    <hr>   
+    <!-- Tarjeta uno -->
+    <div class="row">
+    <div class="col-xl-4 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">Cargar Libros</div>
+                        <hr>   
+                        <input type="file" id="fileLibros" class="btn btn-success btn-sm"></input>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">Mostrar Estructura</div>
+                        <hr>
+                        <button class="btn btn-success btn-sm" onclick="graficaDispersa()">Matriz Dispersa</button>
+                        <button class="btn btn-success btn-sm" onclick="graficaOrtogonal()">Matriz Ortogonal</button>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
+<div class="col-xl-12 col-md-6 mb-4">
+    <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                    <div class="h5 mb-0 font-weight-bold text-gray-800" id="graficalibros"></div>
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+</div>
+
+<!-- FIN libros Administrador -->
+
+
+
+ <!-- Pagina Libros sin login-->
+ <div class="container-fluid" id="librosSinLogin">
+    <hr>   
+    <!-- Tarjeta uno -->
+    
+        <!-- Tarjeta uno -->
+        
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1" id="fantasiaSinLogin"></div>
+        <hr>
+        <!-- Tarjeta Dos -->
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1" id="thrillerSinLogin"></div>
+        </div>
+        <hr>
+    <hr>
+ 
+
+<!-- FIN libros sin login -->
+
+
+
+
+
+    <!-- Barra vertical usuario -->
+    <div id="navUsuario">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <!-- Titulo barra vertical -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center">
+                <div class="sidebar-brand-text mx-3">Biblioteca EDD <sup>2022</sup></div>
+            </a>
+            <!-- Botones -->
+            <div class="sidebar-card d-none d-lg-flex">
+            <button class="btn btn-success btn-sm">Perfil </button>
+            </div>
+            <!-- Botones -->
+            <div class="sidebar-card d-none d-lg-flex">
+                <button class="btn btn-success btn-sm" onclick="iraLibrosUsuario()"> Libros </button>
+                </div>
+            <!-- Botones -->
+            <div class="sidebar-card d-none d-lg-flex">
+                <button class="btn btn-success btn-sm" onclick="irAutoresUsuario()"> Autores </button>
+            </div>
+            <div class="sidebar-card d-none d-lg-flex">
+                <button class="btn btn-success btn-sm" onclick="logoutUsuario()"> Logout </button>
+            </div>
+             <!-- ----- ------------------------------- -->
+        </ul>
+        </div>
+        <!-- Fin barra vertical usuario-->
+
+        <!-- Pagina principal -->
+            <div class="container-fluid" id="principalUsuario">         
+            </div>
+        <!-- Fin pagina principal -->   
+
+
+
+
+          <!-- Pagina USUARIOS autores -->
+          <div class="container-fluid" id="usuarioAutores" >
+            <hr>   
+            <hr>   
+            <!-- Tarjeta uno -->
+            <div class="row" id="autoresUsuario">
+            <hr>
+          </div>
+          <hr>
+          <hr>
+          <div id="busquedaAutor" >
+            <div class="col-xl-4 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">busqueda</div>
+                                <hr>   
+                                <input type="text" id="autorBusqueda" class="btn btn-success btn-sm"></input>
+                                <button  id="fileAutores" class="btn btn-success btn-sm" onclick="buscandoAutor()">Buscar</input>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="resultadoBusquedaAutor">
+                
+            </div>
+        </div>
+          </div>
+       
+    <!-- FIN Autores usuario -->
+    
+    
+    <!-- INICIO LIBROS USUARIO -->
+
+    <div class="container-fluid" id="librosusuarios2" >
+    <div class="row" id="librosUsuario">
+        <hr>
+    </div>
+</div>
+
+<!-- FIN LIBROS USUARIO -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+            </div>
+            <!-- ----  -  --  --    SCRIPTS- -- -- -- - - - - -- - - -  -- - -- - -- - -- - - - - - -- - - -->
+            <script src="https://d3js.org/d3.v5.min.js"></script>
+            <script src="https://unpkg.com/@hpcc-js/wasm@0.3.11/dist/index.min.js"></script>   
+            <script src="https://unpkg.com/d3-graphviz@3.0.5/build/d3-graphviz.js"></script>
+            <script type="text/javascript" src="./index.js"> </script>
+    </body>
+</html>
